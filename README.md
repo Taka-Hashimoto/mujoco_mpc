@@ -11,6 +11,21 @@
   </a>
 </p>
 
+## 🔧 Ubuntu 24.04 Compatible Fork
+
+> **Note**: This is a fork of [google-deepmind/mujoco_mpc](https://github.com/google-deepmind/mujoco_mpc) 
+> that has been updated to build and run on **Ubuntu 24.04** with modern toolchain support.
+
+### Key Improvements in This Fork
+
+- ✅ **Ubuntu 24.04 Support**: Updated from Ubuntu 20.04 with clang-18 instead of clang-12
+- ✅ **Modern Python Packaging**: Added `pyproject.toml` and [uv](https://docs.astral.sh/uv/) support for faster dependency management
+- ✅ **Streamlined Setup**: Automated scripts for protobuf generation and binary copying
+- ✅ **C++20/libstdc++13 Compatibility**: Fixed compilation issues with newer toolchains
+- ✅ **CI/CD Updates**: GitHub Actions updated for Ubuntu 24.04 and clang-18
+
+### Original Project
+
 **MuJoCo MPC (MJPC)** is an interactive application and software framework for
 real-time predictive control with [MuJoCo](https://mujoco.org/), developed by
 Google DeepMind.
@@ -20,12 +35,18 @@ currently supports multiple shooting-based planners. Derivative-based methods in
 Gradient Descent, while derivative-free methods include a simple yet very competitive planner
 called Predictive Sampling.
 
+For the original repository and documentation, visit: [google-deepmind/mujoco_mpc](https://github.com/google-deepmind/mujoco_mpc)
+
+- [Ubuntu 24.04 Compatible Fork](#-ubuntu-2404-compatible-fork)
+  - [Key Improvements in This Fork](#key-improvements-in-this-fork)
+  - [Original Project](#original-project)
 - [Overview](#overview)
 - [Graphical User Interface](#graphical-user-interface)
 - [Installation](#installation)
   - [macOS](#macos)
   - [Ubuntu](#ubuntu)
   - [Build Issues](#build-issues)
+- [Python API](#python-api)
 - [Predictive Control](#predictive-control)
 - [Contributing](#contributing)
 - [Known Issues](#known-issues)
@@ -98,8 +119,13 @@ sudo apt-get update && sudo apt-get install cmake libgl1-mesa-dev libxinerama-de
 
 ### Clone MuJoCo MPC
 ```sh
-git clone https://github.com/google-deepmind/mujoco_mpc
+git clone https://github.com/Taka-Hashimoto/mujoco_mpc
 ```
+
+> **Note**: This clones the Ubuntu 24.04 compatible fork. To use the original repository, use:
+> ```sh
+> git clone https://github.com/google-deepmind/mujoco_mpc
+> ```
 
 ### Build and Run MJPC GUI application
 1. Change directory:
@@ -244,7 +270,22 @@ information.
 
 ## Contributing
 
-See the [Contributing](docs/CONTRIBUTING.md) documentation for more information.
+### Contributing to This Fork
+
+This fork is maintained to provide Ubuntu 24.04 compatibility and modern Python tooling support. Contributions are welcome!
+
+**For Ubuntu 24.04/toolchain related issues:**
+- Open issues or pull requests in this repository
+- Focus on build compatibility, modern C++ standards, and Python packaging improvements
+
+**For core MJPC features and algorithms:**
+- Please contribute to the original [google-deepmind/mujoco_mpc](https://github.com/google-deepmind/mujoco_mpc) repository
+- See the original [Contributing](docs/CONTRIBUTING.md) documentation for more information
+
+### Reporting Issues
+
+- **Build/compatibility issues on Ubuntu 24.04**: Report here
+- **Core MJPC bugs or feature requests**: Report in the [original repository](https://github.com/google-deepmind/mujoco_mpc/issues)
 
 ## Known Issues
 
@@ -284,9 +325,15 @@ If you use MJPC in your work, please cite our accompanying [preprint](https://ar
 
 ## Acknowledgments
 
+### Original Project
 The main effort required to make this repository publicly available was
 undertaken by [Taylor Howell](https://thowell.github.io/) and the Google
 DeepMind Robotics Simulation team.
+
+### This Fork
+This Ubuntu 24.04 compatible fork was created and maintained to enable modern toolchain support and streamlined Python packaging. Special thanks to the original DeepMind team for creating this excellent robotics control framework.
+
+**Fork Maintainer**: Contributors working on Ubuntu 24.04 compatibility and modern Python tooling support.
 
 ## License and Disclaimer
 
