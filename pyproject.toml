@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mujoco_mpc"
+version = "0.1.0"
+description = "MuJoCo MPC (MJPC)"
+authors = [
+    {name = "DeepMind", email = "mujoco@deepmind.com"}
+]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers", 
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "brax",
+    "grpcio",
+    "matplotlib",
+    "mediapy",
+    "mujoco >= 3.1.1",
+    "mujoco-mjx",
+    "protobuf",
+]
+
+[project.optional-dependencies]
+test = [
+    "absl-py",
+]
+dev = [
+    "grpcio-tools",
+    "grpcio",
+    "absl-py",
+]
+
+[project.urls]
+Homepage = "https://github.com/google-deepmind/mujoco_mpc"
+Repository = "https://github.com/google-deepmind/mujoco_mpc"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["mujoco_mpc*"]
+
+[tool.setuptools.package-dir]
+"" = "python"

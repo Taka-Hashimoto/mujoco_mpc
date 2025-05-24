@@ -33,3 +33,18 @@ MJDATA.TXT
 MJMODEL.TXT
 # Python
 python/dist/
+
+# Python build artifacts
+python/mujoco_mpc/mjpc/agent_server
+python/mujoco_mpc/mjpc/ui_agent_server
+python/mujoco_mpc/mjpc/tasks/
+python/mujoco_mpc/proto/agent_pb2.py
+python/mujoco_mpc/proto/agent_pb2_grpc.py
+python/mujoco_mpc/proto/agent.proto
+
+# uv files
+uv.lock
+.venv/
+
+# Test files
+test_*.py
